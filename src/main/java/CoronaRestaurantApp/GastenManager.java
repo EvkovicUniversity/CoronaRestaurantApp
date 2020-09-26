@@ -1,2 +1,4 @@
-package CoronaRestaurantApp;public class GastenManager {
+package CoronaRestaurantApp;
+
+public class GastenManager {
 }
