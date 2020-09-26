@@ -14,7 +14,6 @@ public class AppTests {
 
         String opgegevenNaam = scanner.nextLine();
         System.out.println("de opgegeven naam luidt: " + opgegevenNaam);
-
     }
 
 
