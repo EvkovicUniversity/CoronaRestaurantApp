@@ -1,14 +1,18 @@
 package CoronaRestaurantApp;
 
 public class Persoon {
-
+    // Eigenschappen
     private String naam;
     private short leeftijd;
     private String email;
-    private int telefoonnummer;
-    private boolean heefCorona = false;
+    private String telefoonnummer;
+    private boolean heeftCorona = false;
 
-    public Persoon(String naam, short leeftijd, String email, int telefoonnummer) {
+    // Constanten
+    private final String EMAIL_REGEX = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+    private final String TELEFOONNUMMER_REGEX = "^(0|\\+)(\\d*)$";
+
+    public Persoon(String naam, short leeftijd, String email, String telefoonnummer) throws Exception {
         setNaam(naam);
         setLeeftijd(leeftijd);
         setEmail(email);
@@ -20,20 +24,32 @@ public class Persoon {
         this.naam = naam;
     }
 
-    public void setLeeftijd(short leeftijd) {
-        this.leeftijd = leeftijd;
+    public void setLeeftijd(short leeftijd) throws Exception {
+        if (leeftijd >= 0) {
+            this.leeftijd = leeftijd;
+        } else {
+            throw new Exception("Leeftijd kan niet negatief zijn.");
+        }
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String email) throws Exception {
+        if (email.matches(EMAIL_REGEX)) {
+            this.email = email;
+        } else {
+            throw new Exception("Geen correct e-mailadres.");
+        }
     }
 
-    public void setTelefoonnummer(int telefoonnummer) {
-        this.telefoonnummer = telefoonnummer;
+    public void setTelefoonnummer(String telefoonnummer) throws Exception {
+        if (telefoonnummer.matches(TELEFOONNUMMER_REGEX)) {
+            this.telefoonnummer = telefoonnummer;
+        } else {
+            throw new Exception("Geen correct telefoonnummer.");
+        }
     }
 
-    public void setHeefCorona(boolean heefCorona) {
-        this.heefCorona = heefCorona;
+    public void setHeeftCorona(boolean heeftCorona) {
+        this.heeftCorona = heeftCorona;
     }
 
     // Getters
@@ -49,12 +65,12 @@ public class Persoon {
         return email;
     }
 
-    public int getTelefoonnummer() {
+    public String getTelefoonnummer() {
         return telefoonnummer;
     }
 
-    public boolean isHeefCorona() {
-        return heefCorona;
+    public boolean heeftCorona() {
+        return heeftCorona;
     }
 
 }
