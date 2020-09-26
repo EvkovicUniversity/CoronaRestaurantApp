@@ -1,6 +1,7 @@
 package CoronaRestaurantApp;
 
 public class Persoon {
+
     private String naam;
     private short leeftijd;
     private String email;
@@ -55,4 +56,5 @@ public class Persoon {
     public boolean isHeefCorona() {
         return heefCorona;
     }
+
 }
