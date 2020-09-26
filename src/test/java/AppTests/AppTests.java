@@ -7,12 +7,9 @@ import static CoronaRestaurantApp.Methodes.maakEenReservering;
 public class AppTests {
 
     @Test
-    void startReservering(){
-
+    void testReservering(){
         maakEenReservering();
-
     }
-
 
     @Test
     void onvoldoendeTafelsBeschikbaar(){

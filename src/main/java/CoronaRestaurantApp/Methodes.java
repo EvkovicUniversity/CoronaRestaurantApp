@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Methodes {
 
-    public static void maakEenReservering(){
+    public static void maakEenReservering() throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom bij 'T Restaurantje. Hier kunt u een reservering maken.");
         System.out.println("Voer een voor- en achternaam in: ");
@@ -24,15 +24,15 @@ public class Methodes {
         short leeftijdGast = scanner.nextShort();
 
         System.out.println("Wat is uw emailadres?");
-        String emailadres = scanner.next();
+        String emailadresGast = scanner.next();
 
         System.out.println("Tot slot, wat is uw telefoonnummer?");
-        String telefoonnummer = scanner.nextLine();
+        String telefoonnummerGast = scanner.nextLine();
 
         System.out.println("");
         System.out.println("Overzicht van gegevens:");
 
-        Persoon p1 = new Persoon(naamGast, leeftijdGast, emailadres, telefoonnummer);
+        Persoon p1 = new Persoon(naamGast, leeftijdGast, emailadresGast, telefoonnummerGast);
 
         System.out.println("naam: " + p1.getNaam());
         System.out.println("Leeftijd: " + p1.getLeeftijd());
