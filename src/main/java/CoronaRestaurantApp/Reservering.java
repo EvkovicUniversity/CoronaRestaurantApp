@@ -1,13 +1,16 @@
 package CoronaRestaurantApp;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public class Reservering {
 
     private String naamReservering;
     private int aantalGasten;
-    private long datumVan;
-    private long datumTot;
+    private LocalDateTime datumVan;
+    private LocalDateTime datumTot;
 
-    Reservering(String naamReservering, int aantalGasten, long datumVan, long datumTot){
+    Reservering(String naamReservering, int aantalGasten, LocalDateTime datumVan, LocalDateTime datumTot){
         setNaamReservering(naamReservering);
         setAantalGasten(aantalGasten);
         setDatumVan(datumVan);
@@ -31,19 +34,19 @@ public class Reservering {
         return aantalGasten;
     }
 
-    public void setDatumVan(long datumVan) {
+    public void setDatumVan(LocalDateTime datumVan) {
         this.datumVan = datumVan;
     }
 
-    public long getDatumVan() {
+    public LocalDateTime getDatumVan() {
         return datumVan;
     }
 
-    public void setDatumTot(long datumTot) {
+    public void setDatumTot(LocalDateTime datumTot) {
         this.datumTot = datumTot;
     }
 
-    public long getDatumTot() {
+    public LocalDateTime getDatumTot() {
         return datumTot;
     }
 }
