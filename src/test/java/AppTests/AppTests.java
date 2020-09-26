@@ -2,12 +2,13 @@ package AppTests;
 
 
 import org.junit.jupiter.api.Test;
-import static CoronaRestaurantApp.Methodes.maakEenReservering;
+
+import static CoronaRestaurantApp.Main.maakEenReservering;
 
 public class AppTests {
 
     @Test
-    void testReservering(){
+    void testReservering() throws Exception {
         maakEenReservering();
     }
 
