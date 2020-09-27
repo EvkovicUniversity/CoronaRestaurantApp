@@ -6,8 +6,8 @@ import static CoronaRestaurantApp.Methodes.*;
 
 public class Main {
 
-    public static void maakEenReservering() throws Exception {
-        System.out.println("Welkom bij 'T Restaurantje. Hier kunt u een reservering maken.");
+    public static void plaatsEenReservering(Restaurant restaurant) throws Exception {
+        System.out.println("Welkom bij" + restaurant.getNaam() + ". Hier kunt u een reservering maken.");
 
         String naamGast = vraagString("Voer een voor- en achternaam in: ");
         Date beginDatum = datumInvoeren();
@@ -23,7 +23,7 @@ public class Main {
 
         System.out.println("");
         System.out.println("Overzicht van gegevens:");
-        System.out.println("naam: " + p1.getNaam());
+        System.out.println("Naam: " + p1.getNaam());
         System.out.println("Leeftijd: " + p1.getLeeftijd());
         System.out.println("Email: " + p1.getEmail());
         System.out.println("Telefoonnummer: " + p1.getTelefoonnummer());
