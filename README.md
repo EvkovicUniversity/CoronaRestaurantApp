@@ -17,5 +17,5 @@ Testen:
 Classes:
 - GastenManager
 - Persoon
+- Restaurant
 - Reservering
-- Tafel
