@@ -7,7 +7,7 @@ import static CoronaRestaurantApp.Methodes.*;
 public class Main {
 
     public static void plaatsEenReservering(Restaurant restaurant) throws Exception {
-        System.out.println("Welkom bij" + restaurant.getNaam() + ". Hier kunt u een reservering maken.");
+        System.out.println("Welkom bij " + restaurant.getNaam() + ". Hier kunt u een reservering maken.");
 
         String naamGast = vraagString("Voer een voor- en achternaam in: ");
         Date beginDatum = datumInvoeren();

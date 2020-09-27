@@ -1,8 +1,5 @@
-package AppTests;
+package CoronaRestaurantApp;
 
-
-import CoronaRestaurantApp.Persoon;
-import CoronaRestaurantApp.Restaurant;
 import org.junit.jupiter.api.Test;
 
 import static CoronaRestaurantApp.Main.plaatsEenReservering;

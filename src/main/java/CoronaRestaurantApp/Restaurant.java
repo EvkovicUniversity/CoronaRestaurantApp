@@ -6,7 +6,7 @@ public class Restaurant {
     private Persoon contactpersoon;
     private short aantalTafels;
 
-    public Restaurant(String naam, Persoon contactpersoon, short aantalTafels) {
+    public Restaurant(String naam, Persoon contactpersoon, short aantalTafels) throws Exception {
         setNaam(naam);
         setContactpersoon(contactpersoon);
         setAantalTafels(aantalTafels);
@@ -17,12 +17,20 @@ public class Restaurant {
         this.naam = naam;
     }
 
-    public void setContactpersoon(Persoon contactpersoon) {
-        this.contactpersoon = contactpersoon;
+    public void setContactpersoon(Persoon contactpersoon) throws Exception {
+        if (contactpersoon != null) {
+            this.contactpersoon = contactpersoon;
+        } else {
+            throw new Exception("Er moet een contactpersoon worden opgegeven.");
+        }
     }
 
-    public void setAantalTafels(short aantalTafels) {
-        this.aantalTafels = aantalTafels;
+    public void setAantalTafels(short aantalTafels) throws Exception {
+        if (aantalTafels >= 0) {
+            this.aantalTafels = aantalTafels;
+        } else {
+            throw new Exception("Je kan geen negatief aantal tafels hebben.");
+        }
     }
 
     // Getters
